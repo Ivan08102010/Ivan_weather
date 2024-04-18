@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <h1 align="center">🌤️🌥️🌦️⛅☀Погода☀⛅🌦️🌥️🌤️</h1>
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" href="{% static 'weather/css/styles.css' %}" rel="stylesheet" />
@@ -11,10 +12,12 @@
 
 </head>
 <body>
-        <ul>
+        <ul align="center" type="none">
             {%for m  in menu  %}
-            <li>
+            <li align="center">
+                ※
                 <a href="{% url m.url_n %}">{{m.title}}</a>
+                ※
             </li>
         {%endfor%}
         </ul>
