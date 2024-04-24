@@ -6,9 +6,56 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" href="{% static 'weather/css/styles.css' %}" rel="stylesheet" />
+
+    {%if b >= 27  %}
     <style>
-        body {background-color:#c1ebef;}
+        body {background-color:#fff416;}
     </style>
+
+    {%elif b >= 22  %}
+    <style>
+        body {background-color:#e0de57;}
+    </style>
+
+    {%elif b >= 16  %}
+    <style>
+        body {background-color:#fcdb90;}
+    </style>
+
+    {%elif b >= 10  %}
+    <style>
+        body {background-color:#e5dece;}
+    </style>
+
+    {%elif b >= 0  %}
+    <style>
+        body {background-color:#dbdaff;}
+    </style>
+
+    {%elif b >= -10  %}
+    <style>
+        body {background-color:#8885ff;}
+    </style>
+
+    {%elif b >= -20  %}
+    <style>
+        body {background-color:#716dff;}
+    </style>
+
+    {%elif b >= -30  %}
+    <style>
+            body {background-color:#4b4cf2;}
+    </style>
+
+    {%else%}
+        <style>
+            body {background-color:#1807ff;}
+        </style>
+
+
+
+    {%endif%}
+
 
 </head>
 <body>
