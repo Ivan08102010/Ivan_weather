@@ -19,17 +19,10 @@ def first(request):
 
     return render(request, "weather/first.html", context={'menu': menu, 'v': v, 'b' : b,'w':w})
 
-def city_base(request,city_id):
+def city_base(request):
     v = get_weather('Bryansk')
     b = int(v)
     return render(request, "weather/city_base.html", context={'menu': menu, 'b' : b,})
-
-def citis(request,city_id):
-    if city_id == 1:
-        v = get_weather('Moscow')
-        b = int(v)
-        w = get_weather_2('Moscow')
-        return render(request, "weather/first.html", context={'menu': menu, 'v': v, 'b' : b,'w':w})
 
 
 

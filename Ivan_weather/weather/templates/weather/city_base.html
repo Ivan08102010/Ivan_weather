@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
 {%block content%}
     <title>Города</title>
+<h1 align="center">Введите город
 
-<ul>
-
-    {% for с in Cities %}
-    <li>
-        <a href="{% url 'city' b.id %}"> {{b.name}}</a>
-    </li>
-    {% endfor %}
-</ul>
+</h1>
+<form align="center" action="">
+    <input type = "text" name="filed_text">
+    <button type = "sumbit">Поиск</button>
+</form>
 
 {% endblock %}
