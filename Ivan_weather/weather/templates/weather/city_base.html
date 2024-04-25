@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{%block content%}
+    <title>Города</title>
+
+<ul>
+
+    {% for с in Cities %}
+    <li>
+        <a href="{% url 'city' b.id %}"> {{b.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
