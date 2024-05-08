@@ -9,9 +9,6 @@ b = '0'
 menu = [{'title': 'Главная', 'url_n': 'first'},
         {'title': 'Города', 'url_n': 'city_b'}
         ]
-
-
-
 def first(request):
     v = get_weather('Bryansk')
     b = int(v)
@@ -29,6 +26,7 @@ def city_base(request):
         b = int(v)
         w = get_weather_2(city)
     else:
+        city = '0'
         vvod = 0
         v = '0'
         b = 0
