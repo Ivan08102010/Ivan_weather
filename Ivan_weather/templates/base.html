@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link type="text/css" href="{% static '\women\css\styles.css' %}" rel="stylesheet" />
     <h1 align="center">🌤️🌥️🌦️⛅☀Погода☀⛅🌦️🌥️🌤️</h1>
     <meta charset="UTF-8">
-    <link type="text/css" href="{% static 'weather/css/styles.css' %}" rel="stylesheet" />
-
     {%if b >= 27  %}
     <style>
         body {background-color:#ea572c;}
@@ -53,20 +52,26 @@
 
 
 
+
     {%endif%}
 
 
-</head>
+
+
 <body>
         <ul align="center" type="none">
-            {%for m  in menu  %}
             <li align="center">
-                ※
-                <a href="{% url m.url_n %}">{{m.title}}</a>
-                ※
+                <div class="text-box1b">
+                <a href="{% url 'first' %}" class="btn btn-white btn-        animate">Главная</a>
+                </div>
             </li>
-        {%endfor%}
+            <li align="center">
+                <div class="text-box2b">
+                <a href="{% url 'city_b' %}" class="btn btn-white btn-        animate">Города</a>
+                </div>
+            </li>
         </ul>
+
 {% block content %}
 {% endblock %}
 </body>

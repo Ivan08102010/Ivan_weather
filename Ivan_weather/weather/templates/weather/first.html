@@ -1,31 +1,30 @@
 {% extends 'base.html' %}
 {%block content%}
     <title>Главная</title>
+<div class = "text-box3t" >
+    {%if w == 'Clear'  %}
+        <h1 align="center"><em>Сейчас в Брянске ясно. Температура </em> <B> {{v}}℃ </B>  </h1>
+        <div align="center"><img  src= "https://catherineasquithgallery.com/uploads/posts/2021-02/1612726310_132-p-yarko-goluboi-fon-neba-164.jpg"width="500" height="500"></img ></div>
+    {% endif %}
 
-{%if w == 'Clear'  %}
-    <h1 align="center"><em>Сейчас в Брянске ясно. Температура </em> <B> {{v}}℃ </B>  </h1>
-    <div align="center"><img  src= "https://catherineasquithgallery.com/uploads/posts/2021-02/1612726310_132-p-yarko-goluboi-fon-neba-164.jpg"width="500" height="500"></img ></div>
-{% endif %}
+    {%if w == 'Rain'  %}
+        <h1 align="center"><em>Сейчас в Брянске дождь. Температура </em> <B> {{v}}℃ </B>  </h1>
+        <div align="center"><img  src= "https://s.poembook.ru/theme/c0/ae/3c/1d52305f4ce3a38e925750b7c43af78e0905f968.jpeg"width="500" height="500"></img ></div>
+    {% endif %}
 
-{%if w == 'Rain'  %}
-    <h1 align="center"><em>Сейчас в Брянске дождь. Температура </em> <B> {{v}}℃ </B>  </h1>
-    <div align="center"><img  src= "https://s.poembook.ru/theme/c0/ae/3c/1d52305f4ce3a38e925750b7c43af78e0905f968.jpeg"width="500" height="500"></img ></div>
-{% endif %}
+    {%if w == 'Clouds'  %}
+        <h1 align="center"><em>Сейчас в Брянске облачно. Температура </em> <B> {{v}}℃ </B>  </h1>
+        <div align="center"><img  src= "https://sun9-25.userapi.com/impg/KewQtxY_0U74oEPlWwO8KcrItXyeBID0_-AYsg/r0QPLKcbKgo.jpg?size=1350x817&quality=96&sign=0a1b252fd7f265519ac26d3172272d63&c_uniq_tag=0QSrmkm0IrBFTmd5Rixpnr13Lwo2A6lB27hXrABBt9I&type=album"width="500" height="500"></img ></div>
+    {% endif %}
 
-{%if w == 'Clouds'  %}
-    <h1 align="center"><em>Сейчас в Брянске облачно. Температура </em> <B> {{v}}℃ </B>  </h1>
-    <div align="center"><img  src= "https://sun9-25.userapi.com/impg/KewQtxY_0U74oEPlWwO8KcrItXyeBID0_-AYsg/r0QPLKcbKgo.jpg?size=1350x817&quality=96&sign=0a1b252fd7f265519ac26d3172272d63&c_uniq_tag=0QSrmkm0IrBFTmd5Rixpnr13Lwo2A6lB27hXrABBt9I&type=album"width="500" height="500"></img ></div>
-{% endif %}
+    {%if w == 'Storm'  %}
+        <h1 align="center"><em>Сейчас в Брянске ясно. Температура </em> <B> {{v}}℃ </B>  </h1>
+        <div align="center"><img  src= "https://cs7.pikabu.ru/post_img/2018/12/05/2/og_og_15439722522652193.jpg"width="500" height="500"></img ></div>
+    {% endif %}
 
-{%if w == 'Storm'  %}
-    <h1 align="center"><em>Сейчас в Брянске ясно. Температура </em> <B> {{v}}℃ </B>  </h1>
-    <div align="center"><img  src= "https://cs7.pikabu.ru/post_img/2018/12/05/2/og_og_15439722522652193.jpg"width="500" height="500"></img ></div>
-{% endif %}
-
-{%if w == 'Snowfall'  %}
-    <h1 align="center"><em>Сейчас в Брянске снег. Температура </em> <B> {{v}}℃ </B>  </h1>
-    <div align="center"><img  src= "https://behdasht.news/images/news/132628/thumbs/132628.jpg"width="500" height="500"></img ></div>
-{% endif %}
-
-
+    {%if w == 'Snowfall'  %}
+        <h1 align="center"><em>Сейчас в Брянске снег. Температура </em> <B> {{v}}℃ </B>  </h1>
+        <div align="center"><img  src= "https://behdasht.news/images/news/132628/thumbs/132628.jpg"width="500" height="500"></img ></div>
+    {% endif %}
+</div>
     {% endblock %}
