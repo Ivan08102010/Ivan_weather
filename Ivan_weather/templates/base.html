@@ -2,12 +2,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <div class = text-box4t>
     <link type="text/css" href="{% static '\women\css\styles.css' %}" rel="stylesheet" />
-    <h1 align="center">🌤️🌥️🌦️⛅☀Погода☀⛅🌦️🌥️🌤️</h1>
+    <h1 align="center" class = h1>🌤️🌥️🌦️⛅☀Погода☀⛅🌦️🌥️🌤️</h1>
+    </div>
     <meta charset="UTF-8">
-    {%if b >= 27  %}
+    {%if b >= 36  %}
     <style>
-        body {background-color:#ea572c;}
+        body {background-color:#FF5637;}
+    </style>
+
+    {%elif b >= 32  %}
+    <style>
+        body {background-color:#FD6A6E;}
+    </style>
+
+    {%elif b >= 27  %}
+    <style>
+        body {background-color:#FFA26B;}
     </style>
 
     {%elif b >= 22  %}
@@ -15,9 +27,19 @@
         body {background-color:#e0de57;}
     </style>
 
+    {%elif b >= 19  %}
+    <style>
+        body {background-color:#C3FF00;}
+    </style>
+
     {%elif b >= 16  %}
     <style>
         body {background-color:#ffe266;}
+    </style>
+
+    {%elif b >= 13  %}
+    <style>
+        body {background-color:#EEFFA8;}
     </style>
 
     {%elif b >= 10  %}
@@ -49,28 +71,20 @@
         <style>
             body {background-color:#7400ed;}
         </style>
-
-
-
-
     {%endif%}
-
-
-
-
 <body>
         <ul align="center" type="none">
-            <li align="center">
-                <div class="text-box1b">
-                <a href="{% url 'first' %}" class="btn btn-white btn-        animate">Главная</a>
-                </div>
-            </li>
-            <li align="center">
-                <div class="text-box2b">
-                <a href="{% url 'city_b' %}" class="btn btn-white btn-        animate">Города</a>
-                </div>
-            </li>
-        </ul>
+            <button class = 'link' style="--content: 'Главная'"href="{% url 'first' %}">
+  <div class="left"></div>
+    <a href="{% url 'first' %}" class="link        animate">Главная</a>
+  <div class="right"></div></button>
+
+            <button class = 'link' style="--content: 'Города'"href="{% url 'first' %}">
+  <div class="left"></div>
+    <a href="{% url 'city_b' %}" class="link        animate">Города</a>
+  <div class="right"></div>
+            </button>
+            </ul>
 
 {% block content %}
 {% endblock %}
