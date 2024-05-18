@@ -74,16 +74,17 @@
     {%endif%}
 <body>
         <ul align="center" type="none">
-            <button class = 'link' style="--content: 'Главная'"href="{% url 'first' %}">
+            <button>
   <div class="left"></div>
-    <a href="{% url 'first' %}" class="link        animate">Главная</a>
-  <div class="right"></div></button>
-
-            <button class = 'link' style="--content: 'Города'"href="{% url 'first' %}">
-  <div class="left"></div>
-    <a href="{% url 'city_b' %}" class="link        animate">Города</a>
+    <a class="link" href="{% url 'first' %}">Главная</a>
   <div class="right"></div>
-            </button>
+</button>
+
+            <button>
+  <div class="left"></div>
+    <a class="link" href="{% url 'city_b' %}">Города</a>
+  <div class="right"></div>
+</button>
             </ul>
 
 {% block content %}
