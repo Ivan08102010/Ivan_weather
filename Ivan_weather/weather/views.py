@@ -17,18 +17,17 @@ def first(request):
 def city_base(request):
     if request.GET:
         city = request.GET['filed_text']
-        print(city)
         vvod = 1
         b = get_weather(city)
         w = get_weather_2(city)
+        print(city,b,w)
     else:
         city = '0'
         vvod = 0
         b = 0
         w = ''
-
-
     return render(request, "weather/city_base.html", context={'menu': menu, 'b' : b,'w':w,"vvod":vvod,'city':city})
 
-
-
+def week_f(request):
+    a = 2
+    return render(request, "weather/weather for a week.html", context={'a': a})
